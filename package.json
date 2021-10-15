@@ -10,12 +10,9 @@
     "clean:storybook": "rimraf build",
     "lint": "eslint src",
     "prettier": "prettier --write \"{src,example/src,stories}/**/*.{js,css,md}\"",
-    "prepublishOnly": "yarn run test && yarn run build",
-    "release": "standard-version",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "storybook": "start-storybook -p ${PORT:-3001} -h 0.0.0.0",
-    "deploy": "gh-pages -d build"
+    "storybook": "start-storybook -p ${PORT:-3001} -h 0.0.0.0"
   },
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -65,7 +62,7 @@
     "> 1%"
   ],
   "dependencies": {
-    "frontend-collective-react-dnd-scrollzone": "^1.0.2",
+    "frontend-collective-react-dnd-scrollzone": "git+ssh://git@github.com:smileeio/frontend-collective-react-dnd-scrollzone.git#56c5b1e061fa4848fdc0fb9980116595e01bb77a",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.1",
     "react-dnd": "^11.1.3",
@@ -74,9 +71,9 @@
     "react-virtualized": "^9.21.2"
   },
   "peerDependencies": {
-    "react": "^16.3.0",
+    "react": "^17.x",
     "react-dnd": "^7.3.0",
-    "react-dom": "^16.3.0"
+    "react-dom": "^16.x"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
@@ -109,11 +106,11 @@
     "jest-enzyme": "^7.1.2",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
-    "react": "^16.11.0",
+    "react": "^17.x",
     "react-addons-shallow-compare": "^15.6.2",
     "react-dnd-test-backend": "^11.1.3",
     "react-dnd-touch-backend": "^9.4.0",
-    "react-dom": "^16.11.0",
+    "react-dom": "^17.x",
     "react-hot-loader": "^4.12.17",
     "react-sortable-tree-theme-file-explorer": "^2.0.0",
     "react-test-renderer": "^16.11.0",
